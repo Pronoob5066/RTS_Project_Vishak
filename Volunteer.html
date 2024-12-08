@@ -1,0 +1,121 @@
+</html>
+<head>
+<style>
+ body {
+  background-color: black;
+  }
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  border: 3px dashed yellow
+}
+
+.styled-table th, .styled-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #F99FFF;
+  color: white;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #00FFFF;
+}
+
+.styled-table tr:nth-child(odd) {
+  background-color: #99FFFF;
+}
+
+
+.styled-table tr:hover {
+  background-color: #ddd;
+}
+
+.styled-table td {
+  text-align: center;
+}
+
+h1, h2 {
+  padding: 10px;
+  color: yellow;
+}
+
+a {
+border: 1px dashed blue;
+color: yellow;
+font-size: 15px;
+}
+
+</style>
+</head>
+<body>
+   
+<table id= "home_table" class = "styled-table">
+  <h1>
+    Volunteer tracker
+  </h1>
+   <h2> Welcome </h2>
+   <h4> <a id = "sign" href = 'Sign-in.html'> Profile change </a> </h4>
+  <tr>
+    <th scope="col">Team Name</th>
+    <th scope="col">People</th>
+    <th scope="col">Activity</th>
+  </tr>
+   <tr>
+    <th scope="row" id = "add" onclick=myFunction() >add more</th>
+  </tr>
+  <tr>
+    <th scope="row">
+<a href = "TA.html">TA </a> </th>
+    <td>1</td>
+    <td>rjowefiojsssssssssssssssssssssssssssssssssss</td>
+  </tr>
+  <tr>
+    <th scope="row">
+<a href = "teacher.html">Teacher </a> </th>
+    <td>25</td>
+    <td>bhej</td>
+  </tr>
+ 
+</table>
+<script>
+
+const element = document.getElementById("add");
+
+element.addEventListener("mouseover", function() {
+  // Change the element's appearance here
+  this.style.backgroundColor = "yellow";
+});
+
+element.addEventListener("mouseout", function() {
+  // Revert the change here
+  this.style.backgroundColor = "";
+});
+function myFunction() {
+  document.getElementById("add").style.color = "red";// Find a <table> element with id="myTable":
+var table = document.getElementById("home_table");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(2);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+
+// Add some text to the new cells:
+
+cell1.innerHTML = prompt("What is the team name? ");
+cell2.innerHTML = prompt("How many people are in it? ");
+cell3.innerHTML = prompt("What is the reason for this team? ");
+  
+}
+</script>
+
+</body>
+</html>
